@@ -1,0 +1,13 @@
+type Query {
+    member(name: String!): Member
+    members : [Member]
+}
+
+type Mutation {
+    newMember(name: String!, age: Int!): Member!
+}
+
+type Member{
+    name: String
+    age: Int
+}
