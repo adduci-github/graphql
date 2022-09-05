@@ -4,6 +4,7 @@ import com.example.graphql.model.Member;
 import com.example.graphql.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 
@@ -23,5 +24,10 @@ public class GraphQLController {
     @QueryMapping
     public List<Member> members(){
         return memberService.members();
+    }
+
+    @MutationMapping
+    public Member newMember(@Argument String name,@Argument int age){
+        return memberService.newMember(name,age);
     }
 }

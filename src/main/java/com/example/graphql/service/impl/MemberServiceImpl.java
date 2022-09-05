@@ -25,4 +25,12 @@ public class MemberServiceImpl implements MemberService {
     public List<Member> members() {
         return memberRepository;
     }
+
+    @Override
+    public Member newMember(String name, int age) {
+        Member member = new Member(name,age);
+        memberRepository.add(member);
+
+        return member;
+    }
 }

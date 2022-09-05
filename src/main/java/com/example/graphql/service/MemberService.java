@@ -7,4 +7,5 @@ import java.util.List;
 public interface MemberService {
     public Member member(String name);
     public List<Member> members();
+    public Member newMember(String name,int age);
 }

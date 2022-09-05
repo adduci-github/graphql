@@ -18,11 +18,7 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-graphql'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-websocket'
-    // https://mvnrepository.com/artifact/com.graphql-java-kickstart/graphiql-spring-boot-starter
     implementation 'com.graphql-java-kickstart:graphiql-spring-boot-starter:11.1.0'
-    // https://mvnrepository.com/artifact/io.reactivex.rxjava3/rxjava
-    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
 }
 
 tasks.named('test') {
